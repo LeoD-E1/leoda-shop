@@ -143,14 +143,14 @@ const Navbar = () => {
 
   return (
     <>
-      {!isOpen ? null : <Menu setOpen={setOpen} />}
+      {!isOpen ? null : <Menu setOpen={setOpen} navigation={navigation} />}
       <header>
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="border-b border-gray-200">
             <div className="h-16 flex items-center">
               <button
                 type="button"
-                className="bg-white p-2 rounded-md text-gray-400 lg:hidden"
+                className="bg-white p-2 rounded-full lg:hidden text-gray-600 hover:bg-gray-200 focus:bg-gray-300"
                 onClick={() => setOpen(true)}
               >
                 <MenuIcon className="h-6 w-6" aria-hidden="true" />
