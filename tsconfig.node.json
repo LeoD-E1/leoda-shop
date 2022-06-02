@@ -2,7 +2,6 @@
   "compilerOptions": {
     "composite": true,
     "module": "esnext",
-    "baseUrl": "./src",
     "moduleResolution": "node"
   },
   "include": ["vite.config.ts"]

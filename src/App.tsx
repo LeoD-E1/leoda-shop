@@ -1,4 +1,3 @@
-import "./style/App.css";
 import Home from "./pages/Visitor/Home";
 import Navbar from "./components/Navbar/Navbar";
 import { Switch, Route } from "wouter";
@@ -10,6 +9,9 @@ function App() {
       <Switch>
         <Route path="/" component={Home} />
         <Route path="/:user/home" component={Home} />
+        <Route path="/products" component={Home} />
+        <Route path="/products/:productId" component={Home} />
+
         {/* <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
         <Route path="/dashboard" component={DashboardView} />
