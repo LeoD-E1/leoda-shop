@@ -1,4 +1,4 @@
-import CardGroup from "./CardGroup";
+import CardGroup from "./components/CardGroup";
 import { useEffect, useState } from "react";
 import { fetchData } from "../../api/fetchData";
 
