@@ -1,6 +1,8 @@
 import Home from "./pages/Visitor/Home";
 import Navbar from "./components/Navbar/Navbar";
 import { Switch, Route } from "wouter";
+import Products from "./components/Products/Products";
+import Product from "./components/Product/Product";
 
 function App() {
   return (
@@ -9,8 +11,8 @@ function App() {
       <Switch>
         <Route path="/" component={Home} />
         <Route path="/:user/home" component={Home} />
-        <Route path="/products" component={Home} />
-        <Route path="/products/:productId" component={Home} />
+        <Route path="/products" component={Products} />
+        <Route path="/products/:productId" component={Product} />
 
         {/* <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
