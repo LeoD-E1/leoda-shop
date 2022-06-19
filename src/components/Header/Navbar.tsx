@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { Link } from "wouter";
+import menu from "../../pages/menu";
 import {
   HiMenu as MenuIcon,
   HiSearch as SearchIcon,
@@ -143,7 +145,7 @@ const Navbar = () => {
 
   return (
     <>
-      {!isOpen ? null : <Menu setOpen={setOpen} navigation={navigation} />}
+      {!isOpen ? null : <Menu setOpen={setOpen} navigation={menu} />}
       <header>
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="border-b border-gray-200">
@@ -170,17 +172,16 @@ const Navbar = () => {
 
               {/* Flyout menus */}
               <div className="hidden lg:ml-8 lg:block lg:self-stretch">
-                <div className="h-full flex space-x-8">
-                  {navigation.pages.map((page) => (
-                    <a
+                <ul className="h-full flex space-x-8">
+                  {menu.map((page) => (
+                    <li
                       key={page.name}
-                      href={page.href}
                       className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
                     >
-                      {page.name}
-                    </a>
+                      <Link to={`${page.links}`}>{page.name} </Link>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
 
               <div className="ml-auto flex items-center">

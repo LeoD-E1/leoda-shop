@@ -18,10 +18,10 @@ const Menu = (prosp: any) => {
           </div>
 
           <div className="border-t border-gray-200 py-6 px-4 space-y-6">
-            {navigation.pages.map((page: any) => (
+            {navigation.map((page: any) => (
               <div key={page.name} className="flow-root">
                 <a
-                  href={page.href}
+                  href={page.links}
                   className="-m-2 p-2 block font-medium text-gray-900 hover:bg-gray-300 focus:bg-gray-400"
                 >
                   {page.name}

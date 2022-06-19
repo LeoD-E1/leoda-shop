@@ -1,9 +1,6 @@
-import Home from "./pages/Home";
 import Navbar from "./components/Header/Navbar";
 import { Switch, Route } from "wouter";
-import Products from "./components/Products/Products";
 import routes from "./pages";
-import Product from "./components/Product/Product";
 
 function App() {
   return (
