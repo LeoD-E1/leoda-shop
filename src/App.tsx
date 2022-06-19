@@ -1,7 +1,8 @@
-import Home from "./pages/Visitor/Home";
-import Navbar from "./components/Navbar/Navbar";
+import Home from "./pages/Home";
+import Navbar from "./components/Header/Navbar";
 import { Switch, Route } from "wouter";
 import Products from "./components/Products/Products";
+import routes from "./pages";
 import Product from "./components/Product/Product";
 
 function App() {
@@ -9,18 +10,9 @@ function App() {
     <div className="App">
       <Navbar />
       <Switch>
-        <Route path="/" component={Home} />
-        <Route path="/:user/home" component={Home} />
-        <Route path="/products" component={Products} />
-        <Route path="/products/:productId" component={Product} />
-
-        {/* <Route path="/login" component={Login} />
-        <Route path="/register" component={Register} />
-        <Route path="/dashboard" component={DashboardView} />
-        <Route path="/customers" component={CustomersView} /> */}
-        {/*  Routes of Orders */}
-        <Route path="/orders" /* component={Orders } */ />
-        <Route path="/orders/:order" /* component={ DetailedOrder } */ />
+        {routes.map((route, index) => (
+          <Route key={index} path={route.path} component={route.component} />
+        ))}
       </Switch>
     </div>
   );
