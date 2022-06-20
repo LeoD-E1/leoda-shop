@@ -6,7 +6,7 @@ const Products = () => {
   const [products, setProducts] = useState([]);
 
   const fetchProducts = async () => {
-    const data = await fetchData("products/");
+    const data = await fetchData("");
     data && setProducts(data.products);
   };
 
