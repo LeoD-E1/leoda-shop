@@ -1,6 +1,7 @@
 import CardGroup from "./components/CardGroup";
 import { useEffect, useState } from "react";
 import { fetchData } from "../../api/fetchData";
+import { useQuery } from "react-query";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
