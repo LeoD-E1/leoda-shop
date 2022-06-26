@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "wouter";
 
 const Login = () => {
   return (
@@ -6,9 +6,12 @@ const Login = () => {
       <div className="w-full flex flex-wrap">
         <div className="w-full md:w-1/2 flex flex-col">
           <div className="flex justify-center md:justify-start pt-12 md:pl-12 md:-mb-24">
-            <a href="/" className="bg-black text-white font-bold text-xl p-4">
+            <Link
+              href="/"
+              className="bg-black text-white font-bold text-xl p-4"
+            >
               leoda shop
-            </a>
+            </Link>
           </div>
 
           <div className="flex flex-col justify-center md:justify-start my-auto pt-8 md:pt-0 px-8 md:px-24 lg:px-32">
@@ -47,9 +50,9 @@ const Login = () => {
             <div className="text-center pt-12 pb-12">
               <p>
                 Don't have an account?{" "}
-                <a href="/register" className="underline font-semibold">
+                <Link href="/register" className="underline font-semibold">
                   Register here.
-                </a>
+                </Link>
               </p>
             </div>
           </div>
