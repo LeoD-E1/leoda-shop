@@ -159,14 +159,12 @@ const Navbar = () => {
               </button>
 
               {/* Logo */}
-              <div className="ml-4 flex lg:ml-0">
-                <a href="#">
-                  <span>Leoda shop</span>
-                  {/* <img
-                  className="h-8 w-auto"
-                  src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=600"
-                  alt=""
-                /> */}
+              <div className="ml-4 flex lg:ml-0 justify-center md:justify-start ">
+                <a
+                  href="/"
+                  className="bg-black text-white font-bold text-xl p-4 rounded-lg"
+                >
+                  leoda shop
                 </a>
               </div>
 
@@ -187,14 +185,14 @@ const Navbar = () => {
               <div className="ml-auto flex items-center">
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
                   <a
-                    href="#"
+                    href="/login"
                     className="text-sm font-medium text-gray-700 hover:text-gray-800"
                   >
                     Sign in
                   </a>
                   <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
                   <a
-                    href="#"
+                    href="/signup"
                     className="text-sm font-medium text-gray-700 hover:text-gray-800"
                   >
                     Create account
