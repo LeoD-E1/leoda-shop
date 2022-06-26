@@ -149,20 +149,20 @@ const Navbar = () => {
       <header>
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="border-b border-gray-200">
-            <div className="h-16 flex items-center">
+            <div className="h-16 flex items-center ">
               <button
                 type="button"
-                className="bg-white p-2 rounded-full lg:hidden text-gray-600 hover:bg-gray-200 focus:bg-gray-300"
+                className="bg-white p-2 rounded-full lg:hidden text-gray-600 hover:bg-gray-200 focus:bg-gray-300 justify-start"
                 onClick={() => setOpen(true)}
               >
                 <MenuIcon className="h-6 w-6" aria-hidden="true" />
               </button>
 
               {/* Logo */}
-              <div className="ml-4 flex lg:ml-0 justify-center md:justify-start ">
+              <div className="ml-4 flex lg:ml-0 md:justify-center justify-start">
                 <a
                   href="/"
-                  className="bg-black text-white font-bold text-xl p-4 rounded-lg"
+                  className="bg-black text-white font-bold text-xl p-2"
                 >
                   leoda shop
                 </a>
@@ -182,7 +182,7 @@ const Navbar = () => {
                 </ul>
               </div>
 
-              <div className="ml-auto flex items-center">
+              <div className="ml-auto flex items-center justify-end">
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
                   <a
                     href="/login"
@@ -192,7 +192,7 @@ const Navbar = () => {
                   </a>
                   <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
                   <a
-                    href="/signup"
+                    href="/register"
                     className="text-sm font-medium text-gray-700 hover:text-gray-800"
                   >
                     Create account

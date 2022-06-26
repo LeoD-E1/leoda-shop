@@ -2,13 +2,20 @@ import React from "react";
 import Card from "./Card";
 
 interface Product {
-  id: number;
   name: string;
   href: string;
-  imageSrc: string;
-  imageAlt: string;
-  price: string;
-  color: string;
+  images: any[];
+  price: {
+    currency: "ARS" | "USD";
+    value: number;
+  };
+  color: string[];
+  category: string[];
+  description: string;
+  sizes: string[];
+  brand: string;
+  clothingType: string;
+  quantity: number;
 }
 
 interface Props {
@@ -25,8 +32,8 @@ const CardGroup = (props: Props) => {
           {title}
         </h2>
         <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-          {arrObj.map((obj: Product) => (
-            <Card key={obj.id} {...obj} />
+          {arrObj.map((obj: Product, index: number) => (
+            <Card key={index} {...obj} />
           ))}
         </div>
       </div>
