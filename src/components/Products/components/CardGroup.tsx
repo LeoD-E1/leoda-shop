@@ -1,22 +1,6 @@
 import React from "react";
 import Card from "./Card";
-
-interface Product {
-  name: string;
-  href: string;
-  images: any[];
-  price: {
-    currency: "ARS" | "USD";
-    value: number;
-  };
-  color: string[];
-  category: string[];
-  description: string;
-  sizes: string[];
-  brand: string;
-  clothingType: string;
-  quantity: number;
-}
+import { Product } from "../../../types/product";
 
 interface Props {
   title: string;
@@ -25,6 +9,7 @@ interface Props {
 
 const CardGroup = (props: Props) => {
   const { title, arrObj } = props;
+
   return (
     <div className="bg-white">
       <div className="max-w-2xl mx-auto px-4 sm:py-5 sm:px-6 lg:max-w-7xl lg:px-8">
