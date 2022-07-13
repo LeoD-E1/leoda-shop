@@ -24,8 +24,6 @@ const Products = () => {
     return <span>Error: {error.message}</span>;
   }
 
-  console.log(data);
-
   return (
     <>
       <CardGroup title={title} arrObj={data || []} />
